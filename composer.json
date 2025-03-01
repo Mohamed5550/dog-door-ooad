@@ -1,0 +1,17 @@
+{
+    "name": "mohamed5550/dog-door-ooad",
+    "description": "Dog Door app from head first ooa&d book",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohamed Hesham",
+            "email": "mohamed.hesham@layoutinternational.com"
+        }
+    ],
+    "require": {}
+}
