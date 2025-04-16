@@ -13,9 +13,16 @@ class BarkRecognizer
         $this->door = $door;
     }
 
-    public function recognize(string $bark)
+    public function recognize(Bark $bark)
     {
-        echo "Bark recognizer heard a $bark\n";
-        $this->door->open();
+        echo "Bark recognizer heard a {$bark->getSound()}\n";
+        $allowedBarks = $this->door->getAllowedBarks();
+        foreach($allowedBarks as $allowedBark) {
+            if($bark->equals($allowedBark)) {
+                $this->door->open();
+                return;
+            }
+        } 
+        echo "This dog is not allowed\n";
     }
 }
